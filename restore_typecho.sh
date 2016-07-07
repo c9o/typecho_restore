@@ -72,6 +72,7 @@ tar xf user.tar.gz
 cp -rf $rs_dir/tmp/home/wwwroot/www.bitbite.cn/usr $te_dir
 cd $te_dir
 chown www:www -R usr
+rm usr/theme/Themia-for-TE -rf
 
 ## restore database
 
