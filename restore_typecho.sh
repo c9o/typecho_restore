@@ -70,6 +70,8 @@ md5sum -c $rs_dir/tmp/user.tar.gz.md5sum
 cd $rs_dir/tmp
 tar xf user.tar.gz
 cp -rf $rs_dir/tmp/home/wwwroot/www.bitbite.cn/usr $te_dir
+cd $te_dir
+chown www:www -R usr
 
 ## restore database
 
