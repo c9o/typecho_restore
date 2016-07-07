@@ -77,7 +77,9 @@ rm usr/themes/Themia-for-TE -rf
 ## restore database
 
 cd $rs_dir/tmp
+sed -i "s/Themia-for-TE/default/g" database.sql
 sed -i "s/www.bitbite.cn/www.bitbite.xyz/g" database.sql
+patch -p1 database.sql < $cu_dir/sql.diff
 mysql -h"$db_host" -P"$db_port" -u"$db_user" -p"$db_pass" "$db_name" < database.sql
 
 
